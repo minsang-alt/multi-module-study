@@ -12,4 +12,9 @@ public class HelloController {
     public String hello(@RequestParam(defaultValue = "world") String name) {
         return HelloMessage.greet(name);
     }
+
+    @GetMapping("/bye")
+    public String bye(@RequestParam(defaultValue = "world") String name) {
+        return HelloMessage.bye(name);
+    }
 }
